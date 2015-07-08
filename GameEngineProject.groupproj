@@ -1,0 +1,94 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{a6c3319e-47e9-4783-a254-f7f95e251033}</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Projects Include="EDBServer\DBServer.dproj" />
+    <Projects Include="EGameCenter\GameCenter.dproj" />
+    <Projects Include="ELoginGate\LoginGate.dproj" />
+    <Projects Include="ELoginSrv\LoginSrv.dproj" />
+    <Projects Include="ERunGate\RunGate.dproj" />
+    <Projects Include="ESelGate\SelGate.dproj" />
+    <Projects Include="EWolServer\WolServer.dproj" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <Borland.Personality>Default.Personality</Borland.Personality>
+    <Borland.ProjectType />
+    <BorlandProject>
+<BorlandProject xmlns=""><Default.Personality></Default.Personality></BorlandProject></BorlandProject>
+  </ProjectExtensions>
+  <Target Name="GameCenter">
+    <MSBuild Projects="EGameCenter\GameCenter.dproj" Targets="" />
+  </Target>
+  <Target Name="GameCenter:Clean">
+    <MSBuild Projects="EGameCenter\GameCenter.dproj" Targets="Clean" />
+  </Target>
+  <Target Name="GameCenter:Make">
+    <MSBuild Projects="EGameCenter\GameCenter.dproj" Targets="Make" />
+  </Target>
+  <Target Name="LoginGate">
+    <MSBuild Projects="ELoginGate\LoginGate.dproj" Targets="" />
+  </Target>
+  <Target Name="LoginGate:Clean">
+    <MSBuild Projects="ELoginGate\LoginGate.dproj" Targets="Clean" />
+  </Target>
+  <Target Name="LoginGate:Make">
+    <MSBuild Projects="ELoginGate\LoginGate.dproj" Targets="Make" />
+  </Target>
+  <Target Name="DBServer">
+    <MSBuild Projects="EDBServer\DBServer.dproj" Targets="" />
+  </Target>
+  <Target Name="DBServer:Clean">
+    <MSBuild Projects="EDBServer\DBServer.dproj" Targets="Clean" />
+  </Target>
+  <Target Name="DBServer:Make">
+    <MSBuild Projects="EDBServer\DBServer.dproj" Targets="Make" />
+  </Target>
+  <Target Name="LoginSrv">
+    <MSBuild Projects="ELoginSrv\LoginSrv.dproj" Targets="" />
+  </Target>
+  <Target Name="LoginSrv:Clean">
+    <MSBuild Projects="ELoginSrv\LoginSrv.dproj" Targets="Clean" />
+  </Target>
+  <Target Name="LoginSrv:Make">
+    <MSBuild Projects="ELoginSrv\LoginSrv.dproj" Targets="Make" />
+  </Target>
+  <Target Name="SelGate">
+    <MSBuild Projects="ESelGate\SelGate.dproj" Targets="" />
+  </Target>
+  <Target Name="SelGate:Clean">
+    <MSBuild Projects="ESelGate\SelGate.dproj" Targets="Clean" />
+  </Target>
+  <Target Name="SelGate:Make">
+    <MSBuild Projects="ESelGate\SelGate.dproj" Targets="Make" />
+  </Target>
+  <Target Name="RunGate">
+    <MSBuild Projects="ERunGate\RunGate.dproj" Targets="" />
+  </Target>
+  <Target Name="RunGate:Clean">
+    <MSBuild Projects="ERunGate\RunGate.dproj" Targets="Clean" />
+  </Target>
+  <Target Name="RunGate:Make">
+    <MSBuild Projects="ERunGate\RunGate.dproj" Targets="Make" />
+  </Target>
+  <Target Name="WolServer">
+    <MSBuild Projects="EWolServer\WolServer.dproj" Targets="" />
+  </Target>
+  <Target Name="WolServer:Clean">
+    <MSBuild Projects="EWolServer\WolServer.dproj" Targets="Clean" />
+  </Target>
+  <Target Name="WolServer:Make">
+    <MSBuild Projects="EWolServer\WolServer.dproj" Targets="Make" />
+  </Target>
+  <Target Name="Build">
+    <CallTarget Targets="GameCenter;LoginGate;DBServer;LoginSrv;SelGate;RunGate;WolServer" />
+  </Target>
+  <Target Name="Clean">
+    <CallTarget Targets="GameCenter:Clean;LoginGate:Clean;DBServer:Clean;LoginSrv:Clean;SelGate:Clean;RunGate:Clean;WolServer:Clean" />
+  </Target>
+  <Target Name="Make">
+    <CallTarget Targets="GameCenter:Make;LoginGate:Make;DBServer:Make;LoginSrv:Make;SelGate:Make;RunGate:Make;WolServer:Make" />
+  </Target>
+  <Import Condition="Exists('$(MSBuildBinPath)\Borland.Group.Targets')" Project="$(MSBuildBinPath)\Borland.Group.Targets" />
+</Project>
