@@ -110,21 +110,14 @@ object frmGeneralConfig: TfrmGeneralConfig
       Width = 105
       Height = 20
       TabOrder = 0
-      Text = #32718#39118#19990#30028
+      Text = #20256#22855#19990#30028
     end
     object TrackBarLogLevel: TTrackBar
       Left = 8
       Top = 56
       Width = 145
       Height = 25
-      Orientation = trHorizontal
-      Frequency = 1
-      Position = 0
-      SelEnd = 0
-      SelStart = 0
       TabOrder = 1
-      TickMarks = tmBottomRight
-      TickStyle = tsAuto
     end
   end
   object ButtonOK: TButton

@@ -42,7 +42,7 @@ var
 //  GateClass           :String ='SelGate';
 //  GateName            :String  = '选择人物网关';
 
-  TitleName           :String  = '橘子网络';
+  TitleName           :String  = '传奇世界';
   ServerPort          :Integer = 5100;
   ServerAddr          :String  = '127.0.0.1';
   GatePort            :Integer = 7100;
@@ -50,21 +50,21 @@ var
   dwstartgate:dword;
   boGateReady          :Boolean = False;
   boShowMessage        :Boolean;
-  boStarted                   :Boolean = False;
-  boClose                     :Boolean = False;
-  boServiceStart              :Boolean = False;
+  boStarted            :Boolean = False;
+  boClose              :Boolean = False;
+  boServiceStart       :Boolean = False;
   dwKeepAliveTick      :LongWord;
   boKeepAliveTimcOut   :Boolean = False;
   nSendMsgCount        :Integer;
   n456A2C              :Integer;
   n456A30              :Integer;
-  boSendHoldTimeOut             :Boolean;
-  dwSendHoldTick         :LongWord;
+  boSendHoldTimeOut    :Boolean;
+  dwSendHoldTick       :LongWord;
   boDecodeLock         :Boolean;
 
-  nMaxConnOfIPaddr            :Integer = 10;
-  nMaxMsgLen                  :Integer = 100;
-  BlockMethod                 :TBlockIPMethod = mDisconnect;
+  nMaxConnOfIPaddr        :Integer = 10;
+  nMaxMsgLen              :Integer = 100;
+  BlockMethod             :TBlockIPMethod = mDisconnect;
   dwKeepConnectTimeOut    :LongWord = 60 * 1000;
   g_boDynamicIPDisMode    :Boolean = False; //用于动态IP，分机放置登录网关用，打开此模式后，网关将会把连接登录服务器的IP地址，当为服务器IP，发给登录服务器，客户端将直接使用此IP连接角色网关
 
